@@ -57,21 +57,42 @@ $(document).ready(function() {
     if (menu.length) {
       $(window).on("scroll", function() {
         var topDistance = menu.offset().top;
+        if (!menu.is(":visible") || ! $( "#menu-icon" ).is(":visible")) {
+          topDistance = $(window).scrollTop();
+        }
 
+        // console.log();
+        // console.log(`Is Visible: ${!nav.is(":visible")}`);
+        // console.log(`Top Distance: ${topDistance < 50}`);
+        // console.log(`Top: ${topDistance}`);
         // hide only the navigation links on desktop
-        if (!nav.is(":visible") && topDistance < 50) {
-          nav.show();
+        if (!nav.is(":visible")) {
+          if ($(document).width() >= 1440 && topDistance <= 100) {
+            nav.show();
+          } else if ($(document).width() < 1440 && topDistance <= 50) {
+            nav.show();
+          }
         } else if (nav.is(":visible") && topDistance > 100) {
           nav.hide();
         }
 
+        console.log('=============');
+        console.log($( "#menu-icon" ).is(":visible"));
+        console.log(`Top distance: ${topDistance}`);
         // on tablet, hide the navigation icon as well and show a "scroll to top
         // icon" instead
         if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {
           $("#menu-icon-tablet").show();
-          $("#top-icon-tablet").hide();
+          console.log('Show tablet');
         } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 100) {
           $("#menu-icon-tablet").hide();
+          console.log('Hide tablet');
+        }
+
+        // Scroll
+        if(topDistance <= 100){
+          $("#top-icon-tablet").hide();
+        } else {
           $("#top-icon-tablet").show();
         }
       });
