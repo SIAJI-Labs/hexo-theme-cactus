@@ -94,7 +94,7 @@ logo:
   enabled: false
   width: 50
   height: 50
-  url: /images/logo.png
+  url: /images/sia.jpg
   gravatar: false
   grayout: true
 
@@ -109,13 +109,13 @@ logo:
 #   - gravatar: whether to create a favicon from your Gravatar
 favicon:
   desktop:
-    url: /images/favicon.ico
+    url: /images/sia.jpg
     gravatar: false
   android:
-    url: /images/favicon-192x192.png
+    url: /images/sia.jpg
     gravatar: false
   apple:
-    url: /images/apple-touch-icon.png
+    url: /images/sia.jpg
     gravatar: false
 
 # The color scheme that should be used to highlight codeblocks.
@@ -157,20 +157,20 @@ mathjax:
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
   enabled: false
-  shortname: cactus-1
+  shortname: siaji
 
 # Fill in your Utterances data to enable Utterances comments
 utterances:
   enabled: false
-  repo: owner/githubrepo
+  repo: si-aji/blog
   issue_term: pathname
   label: Comment
   theme: github-dark
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
-  enabled: false
-  id: UA-86660611-1
+  enabled: true
+  id: G-8MW1ZTNL9T
 
 # Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
 baidu_analytics:
@@ -179,8 +179,8 @@ baidu_analytics:
 
 # Fill in your Cloudflare Analytics tracking ID to enable Cloudflare Analytics.
 cloudflare_analytics:
-  enabled: false
-  id: 0dabb6e21848405483a237e6a7b6ed04
+  enabled: true
+  id: 924743b8cd02449f4c30593d6621c992
 
 # Fill in your Umami Analytics tracking ID to enable Umami Analytics.
 umami_analytics:
@@ -193,8 +193,8 @@ umami_analytics:
 # logo and/or favicons of you website.
 # To generate hash: `$ echo -n "name@email.com" | md5`.
 gravatar:
-  email: name@email.com
-  hash: d41d8cd98f00b204e9800998ecf8427e
+  email: contact@siaji.com
+  hash: 2926934b6ad29cad35338fb0e3553c1f
 
 # loads libraries and styles from CDN instead or relying on local files
 cdn:
